@@ -70,8 +70,23 @@ def show_all(*args):
 show_all("radio","maps","flashlight") 
 #sec 2
 def show_profile(**kwargs):
-    for key,value in kwargs.items():
-        print(key,value)
-show_fahrenheit(name="Agent X", level=7, active=True)
+    for key, value in kwargs.items():
+        print(key,":",value)
+show_profile(name="Agent X", level=7, active=True)
 #sec 3
-# def power(base, exponent=2):
+def power(base, exponent=2):
+    print(base**exponent)
+power(3) 
+power(3,3)   
+power(exponent=4,base=2) 
+# sec 4
+def repeat(text, times):
+    print(text*times)
+repeat("moishi",8) 
+#sec 5
+def flatten_and_print(nested):
+    for y in nested:
+        for x in y:
+            print(x)  
+flatten_and_print([[1,2],[4,5],[6,7]])
+
