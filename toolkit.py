@@ -12,7 +12,7 @@ def sqware(n):
 sqware(5)     
 #sec 4
 def greet_with_title(name,title="agent"):
-    print(title,name)
+    print("hello",title,name)
 greet_with_title("moishi")
 greet_with_title("moishi","rachel")
 # sec 5
@@ -38,6 +38,40 @@ def show_fahrenheit(c):
 show_fahrenheit(0)
 show_fahrenheit(100)
 show_fahrenheit(37.5)
-
-
-
+# sec 9
+def check_even(n):
+    if n % 2 == 0:
+        print(n, "is evan")
+    else:
+        print(n,"is odd")
+check_even(4)
+check_even(7)
+# sec 10
+def summarize(items):
+    sum=0
+    for num in items:        
+        sum+=num
+    print("sum:", sum)
+    maxnum=items[0]
+    for i in items:
+        if i>maxnum:
+            maxnum=i
+    print(maxnum)
+    min_num=items[0]
+    for i in items:
+        if i<min_num:
+            min_num=i
+    print(min_num)
+summarize([400,900,499,109,500])
+#part 2 sec 1
+def show_all(*args):
+    for arg in args:
+        print(arg)
+show_all("radio","maps","flashlight") 
+#sec 2
+def show_profile(**kwargs):
+    for key,value in kwargs.items():
+        print(key,value)
+show_fahrenheit(name="Agent X", level=7, active=True)
+#sec 3
+# def power(base, exponent=2):
