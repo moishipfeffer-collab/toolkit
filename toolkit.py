@@ -96,5 +96,8 @@ full_name = lambda first_name,last_name: f"{first_name} {last_name}"
 print(full_name("moishi","pfeffer"))
 #sec 5
 bigger = lambda nu1, nu2: nu1 if nu1 >= nu2 else nu2
+#part 4
 print(bigger(5,22))
+mapa=lambda n1, n2, n3: map(n1,n2,n3)
+print(mapa(3,4,5))
 
