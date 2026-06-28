@@ -3,26 +3,21 @@ def greet(name):
     print("hello",name)
 greet("agent x")
 #sec 2
-def add(a, b):
-    print(a+b)
+add=lambda a, b: a+b
 add(3,4)   
 #sec 3
-def sqware(n):
-    print(n**2)
-sqware(5)     
+sqware=lambda n: n**2
+print(sqware(5))     
 #sec 4
-def greet_with_title(name,title="agent"):
-    print("hello",title,name)
-greet_with_title("moishi")
-greet_with_title("moishi","rachel")
+greet_with_title=lambda name,title: f"hello {title}, {name}"
+print(greet_with_title("moishi","rachel"))
 # sec 5
 def describe(name, level, active):
     print("name:",name ,"level:",level,"active:",active)
 describe(name="moishi",active=True,level=5)
 # sec 6
-def multiply(a, b=2):
-    print(a*b)
-multiply(9,9) 
+multiply=lambda a, b=2: a*b
+print(multiply(9,9)) 
 #sec 7
 def print_largest(a, b, c):
     if c >= a and c >= b:
@@ -74,19 +69,32 @@ def show_profile(**kwargs):
         print(key,":",value)
 show_profile(name="Agent X", level=7, active=True)
 #sec 3
-def power(base, exponent=2):
-    print(base**exponent)
-power(3) 
-power(3,3)   
-power(exponent=4,base=2) 
+power=lambda base, exponent=2: base**exponent
+print(power(3,3))   
+print(power(exponent=4,base=2)) 
 # sec 4
-def repeat(text, times):
-    print(text*times)
-repeat("moishi",8) 
+repeat=lambda text, times: text*times
+print(repeat("moishi",8)) 
 #sec 5
 def flatten_and_print(nested):
     for y in nested:
         for x in y:
             print(x)  
-flatten_and_print([[1,2],[4,5],[6,7]])
+flatten_and_print([[1,2],[3,4],[5,6],[7,8],[9,10]])
+#part 3 sec 1
+sqwar=lambda n: n*n
+print(sqwar(5))
+#sec 2
+add=lambda n1,n2: n1+n2
+print(add(3,7))
+#sec 3
+is_even = lambda nu: True if nu % 2 == 0 else False
+print(is_even(4))
+print(is_even(7))
+#sec 4
+full_name = lambda first_name,last_name: f"{first_name} {last_name}"
+print(full_name("moishi","pfeffer"))
+#sec 5
+bigger = lambda nu1, nu2: nu1 if nu1 >= nu2 else nu2
+print(bigger(5,22))
 
